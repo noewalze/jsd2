@@ -6,3 +6,16 @@
 // 3.	 Be sure to link up this file in your HTML doc
 /////////////////////////////////////////////////////////////////////
 
+function calcLongestSide(valueA, valueB){
+	return Math.sqrt ((valueA*valueA) + (valueB*valueB));
+}
+
+/*
+function calcCircumference(r.value)
+
+function calcFahrenheitToCelcius(tempF.value) {
+	return 
+}
+
+function calcCelciusToFarenheit(tempC.value);
+*/
