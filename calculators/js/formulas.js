@@ -10,12 +10,15 @@ function calcLongestSide(valueA, valueB){
 	return Math.sqrt ((valueA*valueA) + (valueB*valueB));
 }
 
-/*
-function calcCircumference(r.value)
 
-function calcFahrenheitToCelcius(tempF.value) {
-	return 
+function calcCircumference(r.value){
+	return (2 * Math.PI * r.value);
 }
 
-function calcCelciusToFarenheit(tempC.value);
-*/
+
+function calcFahrenheitToCelcius(tempF.value) {
+	return ((tempF.value - 32) *(5/9))
+}
+
+
+//function calcCelciusToFarenheit(tempC.value);
