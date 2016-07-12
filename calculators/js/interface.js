@@ -7,7 +7,7 @@ pyB.addEventListener('keyup', calcPy);
 
 function calcPy(event) {
   if (pyA.value.length > 0 && pyB.value.length > 0) {
-    pyC.value = calcLongestSide(pyA.value, pyB.value)
+    pyC.value = calcLongestSide(pyA.value, pyB.value);
   } else {
     pyC.value = '';
   }
@@ -25,7 +25,7 @@ r.addEventListener('keyup', calcC);
 
 function calcC(event) {
   if (r.value.length > 0) {
-    c.value = calcCircumference(r.value)
+    c.value = calcCircumference(r.value.length);
   } else {
     c.value = '';
   }
@@ -45,7 +45,7 @@ tempC.addEventListener('keyup', calcCtoF);
 
 function calcFtoC(event) {
   if (tempF.value.length > 0) {
-    tempC.value = calcFahrenheitToCelcius(tempF.value)
+    tempC.value = calcFahrenheitToCelcius(tempF.value.length);
   } else {
     tempC.value = '';
   }
@@ -53,7 +53,7 @@ function calcFtoC(event) {
 
 function calcCtoF(event) {
   if (tempC.value.length > 0) {
-    tempF.value = calcCelciusToFarenheit(tempC.value)
+    tempF.value = calcCelciusToFarenheit(tempC.value.length);
   } else {
     tempF.value = '';
   }
