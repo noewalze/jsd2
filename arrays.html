@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+	<h1>Arrays</h1>
+
+	<script>
+
+	var days = ["Mon", "Tue", "Wed", "Thurs", "Fri"];
+
+	days.push("Sat");
+
+	// `daysforEach` is TECHNIQUE #1 for looping over an array. Uses `forEach` method with a callback
+
+
+	// inclusion of `day` gives you the `day` parameter
+	console.log(" --- forEach Technique")
+	days.forEach(printDay); 
+	function printDay(item,index){  
+		console.log(index,item);
+	}
+
+	// TECHNIQUE #2 for looping over an array. Uses `for` loop.
+	// there are three sections in a `for` loop. `var i = 0` is happens once 							 							// `i < Things.length` is the conditional check
+	// `i++` happens every time the loop runs
+
+	console.log(" ---- for loop Technique --- ")
+	for (var i = 0; i < days.length; i++) {
+		console.log(i, days[i]);									   
+	};
+
+
+	</script>
+	<script src="arrays.js"></script>
+
+</body>
+</html>
