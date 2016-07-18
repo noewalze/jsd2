@@ -58,7 +58,17 @@ console.log("Question 4", q4)
  * an array of numbers with values 2, 3, 4, and 5.
  */
 
-// Your code here
+var x = [1,2,3,4];
+var q5 = [];
+
+x.forEach(whatever);
+function whatever(num) {
+	var z = num + 1;
+	q5.push(z);
+
+}
+
+console.log("Question 5", q5)
 
 
 /**
@@ -67,5 +77,31 @@ console.log("Question 4", q4)
  * (average = sum of all numbers/number of numbers). Store the average in q6.
  */
 
+// find the total divided by the # of items
+// always starts at 0
 
-// Your code here
+var sum = 0;                   
+q5.forEach(addItUp);
+function addItUp(i) {
+	sum = sum + i;
+}
+
+
+var numberOfItems = q5.length;
+var q6 = sum / numberOfItems;
+
+console.log("sum", sum);
+console.log("numberOfItems", numberOfItems);
+console.log("Question 6", q6)
+
+
+
+
+
+
+
+
+
+
+
+
