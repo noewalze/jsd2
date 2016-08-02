@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object Intro</title>
+</head>
+<body>
+
+<script>
+
+var bus = {
+	"route": "38R"
+};
+var car = {};
+var person = {};
+
+</script>
+
+</body>
+</html>
