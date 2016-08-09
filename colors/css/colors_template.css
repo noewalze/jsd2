@@ -1,0 +1,28 @@
+body {
+	background: thistle;
+	color: navy;
+	font-size: 16px;
+	margin: 50px auto;
+}
+
+li {
+	padding: 10px;
+	margin: 10px;
+}
+
+
+.olive {
+	background-color: olive;
+}
+
+.bisque {
+	background-color: bisque;
+}
+
+.plum {
+	background-color: plum;
+}
+
+.sienna {
+	background-color: sienna;
+}
