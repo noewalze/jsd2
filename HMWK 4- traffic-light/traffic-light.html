@@ -18,13 +18,13 @@
   <button class="control stop-button">Stop</button>
   <button class="control slow-button">Slow</button>
   <button class="control go-button">Go</button>
-  <button class="control caution-button">Caution</button>
+  <button class="control caution-button" onclick="setTimeout(cautionTimer, 2000)">Caution</button>
 </div>
 
 <div id="traffic-light">
-  <div class="light stop-light"></div>
-  <div class="light slow-light"></div>
-  <div class="light go-light"></div>
+  <div class="light stop-light" color="red"></div>
+  <div class="light slow-light" color="yellow"></div>
+  <div class="light go-light" color="green"></div>
 </div>
 
 <div class="pole"></div>
