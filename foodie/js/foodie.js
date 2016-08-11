@@ -18,7 +18,7 @@ function getRestaurants(event) {
 	var search = zip.value;
 	console.log(search);
 
-	var url = "http://opentable.herokuapp.com/api/restaurants?zip=" + search;
+	var url = "http://www.omdbapi.com/?" + search;
 
 	$.getJSON(url, updateRestaurants);
 }
