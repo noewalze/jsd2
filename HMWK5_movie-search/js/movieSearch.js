@@ -25,7 +25,7 @@
 		var search = search.value;
 		console.log(search);
 
-		var url = "http://www.omdbapi.com/?" + search;
+		var url = "http://www.omdbapi.com/?s=" + search;
 
 		$.getJSON(url, updateResults);
 	}
@@ -48,10 +48,10 @@
 		var li = document.createElement("li");
 
 		var template = 
-			'<img>' + details.image + </img>' +
+			'<img=' + details.image + '">' +
 			'<h2>'+ details.title + '</h2>' +
 			'<p>' + details.plot + '</p>' +
-			'<p><a' + details.imdb-link + '</a></p>;
+			'<p>' + details.imdb-link + '</p>' ;
 
 
 			li.innerHTML = template;
