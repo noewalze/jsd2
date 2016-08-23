@@ -4,8 +4,10 @@ var form = document.querySelector("form");
 var zip = document.querySelector("form .zip");
 var results = document.querySelector(".results");
 var header = document.querySelector(".header");
-var restaurantTemplate = document.querySelector("#restaurant-template");
+
+
 var headerTemplate = document.querySelector("#header-template");
+var restaurantTemplate = document.querySelector("#restaurant-template");
 
 
 // Event
@@ -34,13 +36,26 @@ function updateRestaurants(json) {
 	// clears out the old results
 	results.innerHTML = '';
 
+
 	// compile header template
-	var template = handlebars.compile(headerTemplate.innerHTML);
-	var html = templated(json);
-	header.innerHTML = html;
+	var template = Handlebars.compile(headerTemplate.innerHTML);
+	header.innerHTML = template(json);
 
-	var template = Handlebars.compile(restaurantTemplate.innerHTML);
+	// compiling the template source from <script> tag
+	// into a Handlebars template
+	template = Handlebars.compile(restaurantTemplate.innerHTML);
+	results.innerHTML = template(json.restaurants);
 
-	html = template(json.restaurants);
-	results.innerHTML = html;
 }
+
+
+
+
+
+
+
+
+
+
+
+

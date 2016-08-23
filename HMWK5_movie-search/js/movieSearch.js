@@ -5,10 +5,10 @@
 // Structure
 // ----------------------------------------------
 
-	var form = document.querySelector("form");
-	var search = document.querySelector("search");
-	var details = document.querySelector("details");
-	var results = document.querySelector("results");
+	var form = document.querySelector(".form");
+	var search = document.querySelector(".search");
+	var details = document.querySelector(".details");
+	var results = document.querySelector(".results");
 
 
 // Events
@@ -22,7 +22,8 @@
 
 	function getResults(event) {
 		event.preventDefault();
-		var search = search.value;
+		debugger
+		search = search.value;
 		console.log(search);
 
 		var url = "http://www.omdbapi.com/?s=" + search;

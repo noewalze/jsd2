@@ -11,10 +11,6 @@ input {
 	padding: 10px;
 	font-size: 20px;
 }
-div {
-	border-style: solid;
-
-}
 .results li {
 	padding: 15px;
 	border-bottom: 1px solid grey;
@@ -24,4 +20,9 @@ div {
 	float: left;
 	height: 60px;
 	margin-right: 20px;
+}
+.header {
+	border-bottom: 1px solid grey;
+	padding-bottom: 5px;
+	margin: 20px 0;
 }

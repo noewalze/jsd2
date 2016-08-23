@@ -19,17 +19,24 @@
 
 <ul class="results">
 
-<script id="entry-template" type="text/x-handlebars-template">
+	<script id="header-template" type="text/x-handlebars-template{{">
+		<p>{{total_entries}} results found in {{restaurants.postal_code}}
+		
+	</script>
 
-  {{#each}}
-  	  <li>
-	  <img src="{{ }}">
-	  <h2>{{name}}</h2>
-	  <p>{{address}}</p>
-	  </li>
-  {{each}}
-  
-</script>
+	<script id="restaurant-template" type="text/x-handlebars-template{{">
+			 {{#each this}}
+			 <li>
+			 	<img src=" {{image_url}}">
+			 	<h2>{{name}}</h2>
+			 	<p>{{address}}</p>
+			 	<p>{{reserve_url}}</p>
+			 	<p>{total_entries}</p>
+			 </li>
+			{{/each}}
+	</script>
+
+
 
 <!--
 	<li>
