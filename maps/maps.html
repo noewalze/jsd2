@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+      </style>
+<body>
+
+<h1>Maps</h1>
+
+<div class="map"></div>
+
+<img src ="https://maps.googleapis.com/maps/api/staticmap?center=37.790841, -122.40128&zoom=15&size=500x500&key=AIzaSyAvsooaml8AFLTySH199aq9kNtwJz9_7cY&maptype=satellite">
+
+<script>
+
+// Elements
+// -----------
+	var mapElement = document.querySelector('.map');
+
+
+// Map options
+// -----------
+
+	var options = {
+		center: {lat: 37.790841, lng: -122.40128 },
+		zoom: 15
+	};
+
+	function initMap(){
+		var map;
+		map = new google.maps.Map(mapElement, options); 
+		console.log('initMap');
+
+		var marker = new google.maps.Marker({
+			map: map,
+			title: "GA",
+			position: {lat: 37.790841, lng: -122.40128 }
+		});
+
+		var marker2 = new google.maps.Marker({
+			map: map,
+			title: "GA",
+			position: {lat: 37.930117, lng: -122.399926 }
+		});
+
+		var service = new google.maps.places.PlacesService(map);
+		service.nearbySearch({
+			location: {lat: 37.790841, lng: -122.40128 },
+			radius: 10,
+			type: ['store'],
+
+		}, displayResults);
+
+		// callback function with search result data
+		// call createMarker 1 time for each place
+
+		function displayResults(results, status) {
+			console.log("displayResults");
+			debugger
+			results.forEach(createMarker);
+		}
+
+		function createMarker(place) {
+			var marker = new google.maps.Marker({
+			map: map,
+			title: "GA",
+			position: place.geometry.location
+		});
+		}
+
+		navigator.geolocation.getCurrentPosition(updateLocation);
+
+		function updateLocation(position) {
+			console.log("updateLocation");
+			console.log(position.coords);
+			var lat = position.coords.latitude;
+			var lng = position.coords.longitude;
+
+			var marker = new google.maps.Marker({
+				map: map,
+				position: {
+					lat: lat,
+					lng: lng
+				}
+			})
+		}
+
+	}
+
+	// Geolocation: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvsooaml8AFLTySH199aq9kNtwJz9_7cY&callback=initMap&libraries=places"
+    ></script>
+
+</body>
+</html>
+
+
